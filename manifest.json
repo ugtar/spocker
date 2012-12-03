@@ -1,0 +1,21 @@
+{
+	"name": "Spoiler Blocker",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"description": "Blocks spoiler posts in various social media sites.",
+	"offline_enabled": true,
+	"browser_action": {
+		"default_icon": "spoiler-guy.png",
+		"default_popup":"popup.html"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"*://www.facebook.com/*",
+				"*://www.twitter.com/*"
+			],
+			"css": ["blocker.css"],
+			"js": ["blocker.js"]
+		}
+	]
+}
